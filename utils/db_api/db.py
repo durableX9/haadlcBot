@@ -36,4 +36,3 @@ class Database():
             ON CONFLICT(user_id) DO UPDATE SET full_name = excluded.full_name
             """
         return self.cursor.execute(sql, (user_id, full_name))
-           

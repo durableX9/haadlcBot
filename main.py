@@ -1,3 +1,4 @@
+import logging  
 from aiogram import executor
 from loader import dp
 import middlewares, handlers
@@ -11,4 +12,5 @@ async def on_startup(dispatcher):
     await on_startup_notify(dispatcher)
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
     executor.start_polling(dp, on_startup=on_startup)
