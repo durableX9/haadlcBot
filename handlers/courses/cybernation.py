@@ -7,9 +7,9 @@ from keyboards.inline.cybernation_kb import cybernation_kb
 
 @dp.message_handler(commands='cybernation')
 async def cybernation_com(message: types.Message):
-    await message.reply("Cybernation kursi haqida to'liq ma'lumot uchun quyidagi tugmadan foydalaning!", reply_markup=cybernation_kb)
+    await message.reply("Cybernation kursi haqida to'liq ma'lumot olish uchun quyidagi tugmadan foydalaning!", reply_markup=cybernation_kb)
 
-    next_suggest = ("Agarda siz cybernation kursi haqida ma'lumotni <b>video shaklida</b> ko'rmoqchi bo'lsangiz /cybernation_video buyrug'ini bering")
+    next_suggest = ("Agarda siz CyberNation kursi haqida ma'lumotni <b>video shaklida</b> ko'rmoqchi bo'lsangiz /cybernation_video buyrug'ini bering")
     await message.answer(next_suggest)
 
 
