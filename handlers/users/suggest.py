@@ -18,5 +18,5 @@ async def procces_write(message: types.Message, state: FSMContext):
 
      taklif = f"<b>Foydalanuvchidan kelgan taklif yoki shikoyat:</b> {write}"
 
-     await bot.send_message(chat_id='-1001829161444', text=f"{taklif}")
+     await bot.send_message(chat_id='-1002103258715', text=f"{taklif}")
      await state.finish()
