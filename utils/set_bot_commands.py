@@ -11,6 +11,7 @@ async def set_default_commands(dp):
             types.BotCommand("cybersecurity", "CyberSecurity Kursi Haqida Ma'lumot"),
             types.BotCommand("netbackend", " NET BackEnd Kursi Haqida Ma'lumot"),
             types.BotCommand("robohack", "Robohack Kursi Haqida Ma'lumot"),
-            types.BotCommand("flutter", "Flutter Kursi Haqida Ma'lumot")
+            types.BotCommand("flutter", "Flutter Kursi Haqida Ma'lumot"),
+            types.BotCommand("suggest", "Taklif Va Shikoyat Uchun")
         ]
     )
