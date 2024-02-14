@@ -1,4 +1,4 @@
-from aiogram.types import Message, CallbackQuery, ReplyKeyboardRemove
+from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram import types
 from keyboards.default.location_button import keyboard
 from utils.misc.get_distance import choose_shortest
