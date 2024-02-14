@@ -40,4 +40,3 @@ async def procces_write(message: types.Message, state: FSMContext):
      await message.answer("\n".join(text))
 
      await state.finish()
-
