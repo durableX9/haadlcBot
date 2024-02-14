@@ -7,7 +7,7 @@ from states.register import RegisterMan
 from keyboards.default.contact import markup_request
 
 @dp.message_handler(commands='register', state=None)
-async def start_register(message: Message, state: FSMContext):
+async def start_register(message: Message):
     await bot.send_message(chat_id=message.chat.id, text="Iltimos ismingiz va familayangizni yozib qoldiring.")
     await RegisterMan.name_sur.set()
 
@@ -30,4 +30,25 @@ async def procces_number(message: Message, state: FSMContext):
               f"{data.get('number', 'N/A')}\n\n")
 
     await bot.send_message(chat_id='-1002038231507', text=result, parse_mode="HTML")
+
+    text = ("@haad_uz Programming and Cyber & Security Learning Center!\n",
+                "<b>Asosiy:</b>",
+                "/start - Botni Ishga Tushirish\n"
+                "/help - Shu Habarni Ko'rsatadi\n\n"
+                "<b>Biz Haqimizda:</b>\n"
+                "/aboutus - Biz Haqimizda\n"
+                "/aboutadresses - Bizning manzillar\n\n"
+                "<b>Bizning Kurslar Haqida Ma'lumot:</b>\n"
+                "/cybernation - Cybernation Kursi\n"
+                "/cybersecurity - CyberSecurity Kursi\n"
+                "/netbackend - .NET BackEnd Kursi\n"
+                "/robohack - Robohack Kursi\n"
+                "/flutter - Flutter Kursi\n\n"
+                "<b>Kurslarga Ro'yxatdan O'tish:</b>\n"
+                "/register - Kurslarga Yozilish\n",
+                "<b>Sifat nazorati:</b>\n"
+                "/suggest - Taklif Va Shikoyat Uchun")
+
+    await message.answer("\n".join(text))
+
     await state.finish()

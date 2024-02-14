@@ -7,6 +7,7 @@ async def set_default_commands(dp):
             types.BotCommand("help", "Botni Ishlatish Uchun Ko'rsatma"),
             types.BotCommand("aboutus", "Biz Haqimizda"),
             types.BotCommand("aboutadresses", "Bizning Manzillar"),
+            types.BotCommand("register", "Ro'yxatdan o'tish"),
             types.BotCommand("cybernation", "Cybernation Kursi Haqida Ma'lumot"),
             types.BotCommand("cybersecurity", "CyberSecurity Kursi Haqida Ma'lumot"),
             types.BotCommand("netbackend", " NET BackEnd Kursi Haqida Ma'lumot"),
