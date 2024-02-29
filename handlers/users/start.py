@@ -1,10 +1,8 @@
 from aiogram import types
 from loader import dp, db, bot
-from aiohttp import web
+from aiogram.types.web_app_info import WebAppInfo
 
 db.create_table_users()
-app = web.Application()
-
 
 @dp.message_handler(commands='start')
 async def start_command(message: types.Message):
@@ -20,7 +18,7 @@ async def start_command(message: types.Message):
 @dp.message_handler(commands='open_page')
 async def open_page_command(message: types.Message):
     keyboard = types.InlineKeyboardMarkup()
-    keyboard.add(types.InlineKeyboardButton(text="Open Web Page", url="https://cybernation.uz/"))
+    keyboard.add(types.InlineKeyboardButton(text="Open Web Page", web_app=WebAppInfo(url='https://cybernation.uz/')))
     await message.answer("Click the button below to open our website:", reply_markup=keyboard)
 
 
