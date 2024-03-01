@@ -5,6 +5,7 @@ async def set_default_commands(dp):
         [
             types.BotCommand("start", "Botni Ishga Tushirish"),
             types.BotCommand("help", "Botni Ishlatish Uchun Ko'rsatma"),
+            types.BotCommand("open_page", "HAAD LC websaytini ochish"),
             types.BotCommand("aboutus", "Biz Haqimizda"),
             types.BotCommand("aboutadresses", "Bizning Manzillar"),
             types.BotCommand("register", "Ro'yxatdan o'tish"),
